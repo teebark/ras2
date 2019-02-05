@@ -1,0 +1,95 @@
+/*
+ Theme Name:   RAS2 GP Child
+ Theme URI:    https://generatepress.com
+ Description:  Default Generate Press child
+ Author:       Tom Usborne
+ Author URI:   https://tomusborne.com
+ Template:     generatepress
+ Version:      0.1
+*/
+/* Assign color variables */
+:root {
+	--dark-blue: #242743;
+	--blue: #4A5EA5;
+	--gray: #848DA5;
+	--off-white: #DEE2E9;
+	--dark-gray: #646B79;
+	--comp-gold: #baa954;
+	--triad-red: #ba5465;
+	--triad-green: #65ba54;
+}
+/* Mailchimp signup form styling */
+#mc_embed_signup {
+	background: transparent !important;
+}
+#mc_embed_signup label {
+	display: none !important;
+}
+#mc_embed_signup .button {
+	background-color: #405887 !important;
+}
+#mc_embed_signup form {
+	text-align: left !important;
+}
+#next-meeting .wp-show-posts {
+	background: orange;
+	line-height: 31px;
+}
+/* Set background color for header */
+.main-navigation, .inside-header, .site-header {
+	background-color: var(--dark-blue, DarkBlue);
+}
+.main-navigation .navigation-logo {
+    position: absolute ;
+    left: 0;
+    top: 0;
+    height: 60px;
+}
+/* Shift menu over to allow for logo being absolute */
+.main-nav {
+	margin-left: 150px;
+}
+.main-navigation .navigation-logo img {
+	height: 100px;
+	z-index: 99;
+}
+.site-header {
+	height: 52px;
+}
+/* Social icon margins */
+.inside-header {
+	padding: 5px 0 0 0;
+}
+.navigation-search {
+	margin-left: 120px;
+}
+/* Sets the right margin for the mobile hamburger icon */
+@media (max-width: 768px) {
+.menu-logo .main-navigation:not(.mobile-header-navigation) .menu-toggle {
+	margin-right: 100px;
+	}
+}
+/* Set the line height for mobile menu drop down list */
+@media (max-width: 768px) {
+.main-navigation .main-nav ul li a {
+	line-height: 30px;
+	}
+}
+/* Disable secondary menu collapse 
+.secondary-navigation .menu-toggle {
+      display: none;
+}
+
+@media(max-width: 768px) {
+    .secondary-navigation {
+        text-align: center !important;
+    }
+    .secondary-navigation ul {
+        display: block;
+    }
+    .secondary-navigation .sf-menu>li {
+        float: none;
+        display: inline-block !important;
+    }
+}
+*/
