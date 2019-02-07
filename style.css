@@ -1,7 +1,7 @@
 /*
- Theme Name:   RAS2 GP Child
+ Theme Name:   RAS GP Child
  Theme URI:    https://generatepress.com
- Description:  Default Generate Press child
+ Description:  Default GeneratePress child theme
  Author:       Tom Usborne
  Author URI:   https://tomusborne.com
  Template:     generatepress
@@ -17,6 +17,30 @@
 	--comp-gold: #baa954;
 	--triad-red: #ba5465;
 	--triad-green: #65ba54;
+}
+/* Text sizes */
+h1 {
+	font-size: 24px;
+	font-weight: 700;
+}
+h2 {
+	font-size: 20px;
+	font-weight: 700;
+}
+.hero-title h1 {
+	font-size: 30px;
+	font-weight: 700;
+	color: white;
+	text-shadow: 2px 2px 0 black;
+}
+.hero-title p {
+	font-size: 20px;
+	font-weight: 700;
+	color: white;
+	text-shadow: 1px 1px 0 black;
+}
+p, td {
+	font-size: 16px;
 }
 /* Mailchimp signup form styling */
 #mc_embed_signup {
@@ -39,22 +63,26 @@
 .main-navigation, .inside-header, .site-header {
 	background-color: var(--dark-blue, DarkBlue);
 }
+/* Make logo absolute */
 .main-navigation .navigation-logo {
     position: absolute ;
     left: 0;
     top: 0;
     height: 60px;
 }
+/* Set logo height */
+.main-navigation .navigation-logo img {
+	height: 98px;
+	padding: 0 !important;
+	z-index: 99;
+}
 /* Shift menu over to allow for logo being absolute */
 .main-nav {
 	margin-left: 150px;
 }
-.main-navigation .navigation-logo img {
-	height: 100px;
-	z-index: 99;
-}
+/* Header height */
 .site-header {
-	height: 52px;
+	height: 60px;
 }
 /* Social icon margins */
 .inside-header {
@@ -62,6 +90,11 @@
 }
 .navigation-search {
 	margin-left: 120px;
+}
+/* Arrange image blocks */
+.db-grid-column .wp-block-column {
+	display: grid;
+	grid-template-rows: 200px 40px 100px;
 }
 /* Sets the right margin for the mobile hamburger icon */
 @media (max-width: 768px) {
