@@ -1,7 +1,7 @@
 /*
- Theme Name:   RAS GP Child
+ Theme Name:   RAS2 GP Child
  Theme URI:    https://generatepress.com
- Description:  Default GeneratePress child theme
+ Description:  Default Generate Press child
  Author:       Tom Usborne
  Author URI:   https://tomusborne.com
  Template:     generatepress
@@ -10,37 +10,94 @@
 /* Assign color variables */
 :root {
 	--dark-blue: #242743;
+	--light-blue: #1e73be;
 	--blue: #4A5EA5;
+	--blue-comp: #433324;
 	--gray: #848DA5;
 	--off-white: #DEE2E9;
 	--dark-gray: #646B79;
+	--light-gray: #848da575;
 	--comp-gold: #baa954;
 	--triad-red: #ba5465;
 	--triad-green: #65ba54;
+	--footer-gray: #b9b6b6;
 }
+#sticky-placeholder {
+	position: relative;
+}
+/* Make the 2 header widgets conrolled by flex */
+.header-widget {
+	display: flex;
+	padding: 8px 15px;
+	max-width: 100%;
+	width: 60vw;
+	justify-content: flex-end;
+	flex-flow: row wrap;
+}
+.header-widget aside:nth-child(1) {
+	flex-basis: 50%;
+	margin-right: 10px;
+}
+.header-widget aside:nth-child(2) {
+	margin-right: 10px;
+}
+.header-widget .widget {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.header-widget p {
+	margin-bottom: 0;
+}
+#wysiwyg_widgets_widget-2 p {
+	margin-bottom: 0;
+	color: orange;
+}
+/*
+	position: absolute;
+	top: 6%;
+	font-weight: 600;
+	left: 35%;
+	z-index: 99;
+*/
 /* Text sizes */
 h1 {
 	font-size: 24px;
 	font-weight: 700;
+	color: var(--light-blue,Blue);
 }
 h2 {
 	font-size: 20px;
 	font-weight: 700;
+	color: var(--light-blue,Blue);
 }
+h4 {
+	margin-bottom: 0;
+}
+/* Hero image title */
 .hero-title h1 {
 	font-size: 30px;
 	font-weight: 700;
 	color: white;
 	text-shadow: 2px 2px 0 black;
+	box-shadow: -5px -3px 5px var(--light-gray,gray);
+	background-color: var(--light-gray,gray);
+	display: inline-block;
 }
 .hero-title p {
 	font-size: 20px;
 	font-weight: 700;
 	color: white;
 	text-shadow: 1px 1px 0 black;
+	background-color: var(--light-gray,gray);
+	display: table-cell;
 }
 p, td {
 	font-size: 16px;
+	margin-bottom: 0;
+}
+/* Footer widget spacing */
+.footer-widgets .widget-title {
+	margin-bottom: 10px;
 }
 /* Mailchimp signup form styling */
 #mc_embed_signup {
@@ -68,7 +125,6 @@ p, td {
     position: absolute ;
     left: 0;
     top: 0;
-    height: 60px;
 }
 /* Set logo height */
 .main-navigation .navigation-logo img {
@@ -80,13 +136,13 @@ p, td {
 .main-nav {
 	margin-left: 150px;
 }
-/* Header height */
-.site-header {
-	height: 60px;
-}
 /* Social icon margins */
 .inside-header {
-	padding: 5px 0 0 0;
+	padding: 0;
+}
+/* make ghe margis a little smaller than default */
+input.search-field {
+	padding: 8px 15px;
 }
 .navigation-search {
 	margin-left: 120px;
@@ -99,7 +155,11 @@ p, td {
 /* Sets the right margin for the mobile hamburger icon */
 @media (max-width: 768px) {
 .menu-logo .main-navigation:not(.mobile-header-navigation) .menu-toggle {
-	margin-right: 100px;
+	margin-right: 5vw;
+	}
+.header-widget {
+	width: 85vw;
+	margin-left: 10vw;
 	}
 }
 /* Set the line height for mobile menu drop down list */
