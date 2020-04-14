@@ -35,7 +35,7 @@
 	flex-flow: row wrap;
 }
 .header-widget aside:nth-child(1) {
-	flex-basis: 50%;
+	flex-basis: 40%;
 	margin-right: 10px;
 }
 .header-widget aside:nth-child(2) {
@@ -52,13 +52,47 @@
 	margin-bottom: 0;
 	color: orange;
 }
-/*
-	position: absolute;
-	top: 6%;
-	font-weight: 600;
-	left: 35%;
-	z-index: 99;
-*/
+/* Reformat for mobile, from virada-japan.com/create-responsive-tables-wordpress */
+table,
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-width: 1px 0 0 1px;
+  width: 100%;
+}
+table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+@media (max-width: 768px) {
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  table tbody td {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    padding: 0.6rem;
+  }
+  table tbody td::before {
+    content: attr(data-th);
+    font-weight: 300;
+    font-size: small;
+	border-width: 0;
+    display: inline-block;
+    width: 6rem;
+  }
+  table, th, td {
+	  border: 0;
+  }
+}
 /* Text sizes */
 h1 {
 	font-size: 24px;
@@ -73,8 +107,16 @@ h2 {
 h4 {
 	margin-bottom: 0;
 }
+/* Line spacing on the banner widget */
+#wysiwyg_widgets_widget-2 p {
+	line-height: 1;
+}
+/* Gap between header and hero image */
+.home .inside-article {
+	padding-top: 10px;
+}
 /* Hero image title */
-.hero-title h1 {
+h1.hero-title {
 	font-size: 30px;
 	font-weight: 700;
 	color: white;
@@ -82,8 +124,10 @@ h4 {
 	box-shadow: -5px -3px 5px var(--light-gray,gray);
 	background-color: var(--light-gray,gray);
 	display: inline-block;
+	margin-top: 200px;
+	margin-bottom: 0;
 }
-.hero-title p {
+p.hero-title {
 	font-size: 20px;
 	font-weight: 700;
 	color: white;
@@ -91,7 +135,7 @@ h4 {
 	background-color: var(--light-gray,gray);
 	display: table-cell;
 }
-p, td {
+.footer-widgets p, td {
 	font-size: 16px;
 	margin-bottom: 0;
 }
@@ -99,6 +143,64 @@ p, td {
 .footer-widgets .widget-title {
 	margin-bottom: 10px;
 }
+/* PDB field interests width */
+.pdb-list .pdb-field-d_interests .textarea {
+	max-width: 300px;
+}
+/******************************************
+*   Table text size,
+*   striped rows                      
+******************************************/
+.participants-database table th,
+.participants-database table td {
+  font-size: 15px;
+}
+/* Striping for table version */
+/*
+.participants-database table 
+  tr:nth-child(even) {
+	  background: #CCC
+}
+.participants-database table 
+  tr:nth-child(odd) {
+	  background: #FFF
+}
+*/
+/* Striping for flex version */
+.pdb-list section:nth-child(2n+1) {
+	background: #ccc;
+}
+/* Venues flex by row */
+.pdb-list.pdb-containter {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+/* Set the size of each element */
+.pdb-field-venue_name {
+	flex: 2;
+}
+.pdb-field-venue_type {
+	flex: 1;
+}
+.pdb-field-venue_date {
+	flex: 2;
+}
+.pdb-field-host {
+	flex: 2;
+}
+.pdb-field-host_type {
+	flex: 1;
+}
+.pdb-field-group_size {
+	flex: 1;
+}
+.pdb-field-canceled {
+	flex: 1;
+}
+.pdb-field-last_name {
+	flex: 1;
+}
+
 /* Mailchimp signup form styling */
 #mc_embed_signup {
 	background: transparent !important;
