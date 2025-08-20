@@ -22,52 +22,17 @@
 	--triad-green: #65ba54;
 	--footer-gray: #b9b6b6;
 }
-#sticky-placeholder {
+#sticky-placeholder {ras2
+
 	position: relative;
 }
-/* Make the header widgets conrolled by flex */
-.header-widget {
-	display: flex;
-	padding: 8px 15px;
-	max-width: 100%;
-	width: 60vw;
-	justify-content: flex-end;
-	flex-flow: row wrap;
+/* Get rid of label on search,bottom margin on text */
+.wp-block-search__label {
+	display: none;
 }
-.header-widget aside:nth-child(1) {
-	flex-basis: 40%;
-	margin-right: 10px;
+p.banner-text {
+	margin-bottom: .5rem;
 }
-.header-widget aside:nth-child(2) {
-	margin-right: 10px;
-}
-.header-widget .widget {
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-.header-widget p {
-	margin-bottom: 0;
-}
-#wysiwyg_widgets_widget-2 p {
-	margin-bottom: 0;
-	color: orange;
-}
-/* It's a form, but don't allow submit */
-/*
-.bino-spring .wpforms-submit,
-.bino-summer .wpforms-submit,
-.bino-fall   .wpforms-submit,
-.bino-winter .wpforms-submit {
-	display: none !important;
-}
-.bino-spring label.wpforms-field-label,
-.bino-summer label.wpforms-field-label,
-.bino-fall   label.wpforms-field-label,
-.bino-winter label.wpforms-field-label {
-	font-size: 2rem !important;
-	padding-bottom: 1rem !important;
-}
-*/
 /* Reformat for mobile, from virada-japan.com/create-responsive-tables-wordpress */
 table,
 th,
@@ -123,10 +88,6 @@ h2 {
 }
 h4 {
 	margin-bottom: 0;
-}
-/* Line spacing on the banner widget */
-#wysiwyg_widgets_widget-2 p {
-	line-height: 1;
 }
 /* Gap between header and hero image */
 .home .inside-article {
@@ -278,11 +239,6 @@ input.search-field {
 .menu-logo .main-navigation:not(.mobile-header-navigation) .menu-toggle {
 	margin-right: 5vw;
 	}
-.header-widget {
-	width: 85vw;
-	margin-left: 10vw;
-	}
-}
 /* Set the line height for mobile menu drop down list ------------------------------------------ */
 @media (max-width: 768px) { 
 .main-navigation .main-nav ul li a {
