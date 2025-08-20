@@ -25,7 +25,7 @@
 #sticky-placeholder {
 	position: relative;
 }
-/* Make the header widgets conrolled by flex */
+/* Make the 2 header widgets conrolled by flex */
 .header-widget {
 	display: flex;
 	padding: 8px 15px;
@@ -52,22 +52,6 @@
 	margin-bottom: 0;
 	color: orange;
 }
-/* It's a form, but don't allow submit */
-/*
-.bino-spring .wpforms-submit,
-.bino-summer .wpforms-submit,
-.bino-fall   .wpforms-submit,
-.bino-winter .wpforms-submit {
-	display: none !important;
-}
-.bino-spring label.wpforms-field-label,
-.bino-summer label.wpforms-field-label,
-.bino-fall   label.wpforms-field-label,
-.bino-winter label.wpforms-field-label {
-	font-size: 2rem !important;
-	padding-bottom: 1rem !important;
-}
-*/
 /* Reformat for mobile, from virada-japan.com/create-responsive-tables-wordpress */
 table,
 th,
@@ -82,8 +66,7 @@ table {
 }
 table tr:nth-child(odd) {
     background-color: #f2f2f2;
-}
-/* Mobile CSS --------------------------------------------------------------------- */
+  }
 @media (max-width: 768px) {
   table thead {
     display: none;
@@ -136,7 +119,7 @@ h4 {
 h1.hero-title {
 	font-size: 30px;
 	font-weight: 700;
-	color: white !important;
+	color: white;
 	text-shadow: 2px 2px 0 black;
 	box-shadow: -5px -3px 5px var(--light-gray,gray);
 	background-color: var(--light-gray,gray);
@@ -147,7 +130,7 @@ h1.hero-title {
 p.hero-title {
 	font-size: 20px;
 	font-weight: 700;
-	color: white !important;
+	color: white;
 	text-shadow: 1px 1px 0 black;
 	background-color: var(--light-gray,gray);
 	display: table-cell;
@@ -259,7 +242,7 @@ p.hero-title {
 .inside-header {
 	padding: 0;
 }
-/* Make the margins a little smaller than default */
+/* make ghe margis a little smaller than default */
 input.search-field {
 	padding: 8px 15px;
 }
@@ -267,13 +250,11 @@ input.search-field {
 	margin-left: 120px;
 }
 /* Arrange image blocks */
-/*
 .db-grid-column .wp-block-column {
 	display: grid;
 	grid-template-rows: 200px 40px 100px;
 }
-*/
-/* Sets the right margin for the mobile hamburger icon ----------------------------------------- */
+/* Sets the right margin for the mobile hamburger icon */
 @media (max-width: 768px) {
 .menu-logo .main-navigation:not(.mobile-header-navigation) .menu-toggle {
 	margin-right: 5vw;
@@ -283,8 +264,8 @@ input.search-field {
 	margin-left: 10vw;
 	}
 }
-/* Set the line height for mobile menu drop down list ------------------------------------------ */
-@media (max-width: 768px) { 
+/* Set the line height for mobile menu drop down list */
+@media (max-width: 768px) {
 .main-navigation .main-nav ul li a {
 	line-height: 30px;
 	}
